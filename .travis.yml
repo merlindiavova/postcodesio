@@ -1,0 +1,40 @@
+dist: trusty
+sudo: false
+language: php
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+php:
+  - 7.2
+  - 7.3
+  - 7.4snapshot
+
+before_install: travis_retry composer self-update
+
+install:
+  - rm composer.lock
+  - travis_retry composer -n --prefer-source install
+
+script: php ./vendor/bin/phpspec run -fpretty
+
+jobs:
+  allow_failures:
+    - php: 7.4snapshot
+
+  include:
+    - stage: Code Quality
+      env: CODING_STANDARDS
+      install: travis_retry composer install --prefer-dist
+      script: ./vendor/bin/phpcs
+
+    - stage: Code Quality
+      env: STATIC_ANALYSIS
+      install: travis_retry composer install --prefer-dist
+      script: ./vendor/bin/psalm
+
+    - stage: Code Quality
+      env: STATIC_ANALYSIS
+      install: travis_retry composer install --prefer-dist
+      script: ./vendor/bin/phpstan analyse

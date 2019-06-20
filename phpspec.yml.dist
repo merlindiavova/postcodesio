@@ -1,0 +1,7 @@
+extensions:
+  Cjm\PhpSpec\Extension\TypeHintedMethodsExtension: ~
+suites:
+  postcodesio_api:
+    namespace: PostcodesIO\API
+    psr4_prefix: PostcodesIO\API
+    spec_path: "%paths.config%/test"

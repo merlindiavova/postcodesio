@@ -1,0 +1,55 @@
+{
+  "name": "merlindiavova/postcodesio",
+  "description": "Postcodes.IO API",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Merlin Diavova",
+      "email": "merlin@amesplash.co.uk",
+      "homepage": "https://amesplash.co.uk",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "~7.2",
+    "ext-json": "*",
+    "immutablephp/immutable": "^1.0",
+    "psr/http-client": "^1.0",
+    "psr/http-factory": "^1.0",
+    "psr/http-message": "^1.0"
+  },
+  "require-dev": {
+    "ciaranmcnulty/phpspec-typehintedmethods": "^4.0",
+    "kriswallsmith/buzz": "^1.0",
+    "nyholm/psr7": "^1.1",
+    "phpspec/phpspec": "^5.1",
+    "phpstan/phpstan": "^0.11.8",
+    "roave/security-advisories": "dev-master",
+    "squizlabs/php_codesniffer": "^3.4",
+    "vimeo/psalm": "^3.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "PostcodesIO\\API\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "spec\\PostcodesIO\\API\\": "test/spec/"
+    }
+  },
+  "scripts": {
+    "spec": "./vendor/bin/phpspec run",
+    "analyse": "./vendor/bin/psalm src && ./vendor/bin/phpstan analyse",
+    "test": "composer spec && composer analyse",
+    "check-style": "./vendor/bin/phpcs src test",
+    "fix-style": "./vendor/bin/phpcbf src test",
+    "ci": "composer check-style && composer spec && composer analyse"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  }
+}
