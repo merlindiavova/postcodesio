@@ -1,6 +1,6 @@
 # Postcodes.io API
 
-[![Build Status](https://travis-ci.org/merlindiavova/postcodesio.svg?branch=master)](https://travis-ci.org/merlindiavova/postcodesio) [![Build Status](https://scrutinizer-ci.com/g/merlindiavova/postcodesio/badges/build.png?b=master)](https://scrutinizer-ci.com/g/merlindiavova/postcodesio/build-status/master) [![Latest Stable Version](https://poser.pugx.org/phpunit/phpunit/version)](https://packagist.org/packages/phpunit/phpunit) [![License](https://poser.pugx.org/merlindiavova/postcodesio/license)](https://packagist.org/packages/merlindiavova/postcodesio)
+[![Build Status](https://travis-ci.org/merlindiavova/postcodesio.svg?branch=master)](https://travis-ci.org/merlindiavova/postcodesio) [![Build Status](https://scrutinizer-ci.com/g/merlindiavova/postcodesio/badges/build.png?b=master)](https://scrutinizer-ci.com/g/merlindiavova/postcodesio/build-status/master) [![Latest Stable Version](https://poser.pugx.org/merlindiavova/postcodesio/version)](https://packagist.org/packages/merlindiavova/postcodesio) [![License](https://poser.pugx.org/merlindiavova/postcodesio/license)](https://packagist.org/packages/merlindiavova/postcodesio)
 
 PHP client to consume the [Postcodes.io](https://postcodes.io/) API.
 
