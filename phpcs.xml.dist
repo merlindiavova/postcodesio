@@ -1,14 +1,22 @@
 <?xml version="1.0"?>
 <ruleset name="MerlinDiavovaPostcodesIO">
-  <arg value="p" />
+  <arg name="basepath" value="."/>
+  <arg name="extensions" value="php"/>
+  <arg name="parallel" value="80"/>
+  <arg name="cache" value=".phpcs-cache"/>
+  <arg name="colors"/>
+  <arg value="s" />
+
+  <!-- Ignore warnings, show progress of the run and show sniff names -->
+  <arg value="np" />
+
+  <file>src</file>
 
   <config name="ignore_warnings_on_exit" value="1" />
   <config name="ignore_errors_on_exit" value="1" />
 
   <exclude-pattern>test/*</exclude-pattern>
 
-  <arg name="colors" />
-  <arg value="s" />
 
   <!-- Use the PSR2 Standard-->
   <rule ref="PSR1" />
